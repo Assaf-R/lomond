@@ -9,7 +9,6 @@ full:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules 
 	rm -f $(CLUTTER)
 	insmod $(NAME).ko
-	lsmod | grep $(NAME)
 	ping -c 1 8.8.8.8
 r:
 	rmmod $(NAME)
