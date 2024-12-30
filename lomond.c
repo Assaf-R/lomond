@@ -36,9 +36,10 @@ int kpb_pre(struct kprobe *p, struct pt_regs *regs)
             printk("lomond - Error acurred\n");
             return 0;
         }
+        uint32_t *destination_addr = &sa_in.sin_addr.s_addr;
+        int destination_port = sa_in.sin_port;
+        printk("lomond - connection made - %pI4:%d\n", destination_addr, destination_port);
 
-        printk("lomond - connection made - %pI4:%d\n", &sa_in.sin_addr.s_addr, sa_in.sin_port);
-        
     }
 
     return 0;
