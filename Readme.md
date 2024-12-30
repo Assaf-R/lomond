@@ -2,7 +2,7 @@
 ### Who this?
 Named After the Scottish loch, Lomond is a simple example on how to use kprobes in an LKM for learning purposes and gainning a deeper understanding of the Linux kernel.
 
-This program creates a kprobe and attaches it to the __sys_connect syscall, every time a connection is made a check will be made if it's an IPv4 socket, and if so the target address and port wil be logged in the kernel logs as such - 
+This program creates a kprobe and attaches it to the __sys_connect syscall, every time a connection is made a check will be made if it's an IPv4 socket, and if so the target address and port wil be logged in the kernel logs as such.
 ```
 [Mon Dec 30 17:48:00 2024] Lomond - connection made - 8.8.8.8:260
 ```
