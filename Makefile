@@ -1,4 +1,4 @@
-NAME = net_probe
+NAME = lomond
 obj-m += $(NAME).o 
 PWD := $(CURDIR) 
 CLUTTER = *.o *.cmd *.mod *.mod.c *.order *.symvers .*.cmd *.d *.o.d
@@ -17,4 +17,4 @@ i:
 t:
 	ping -c 1 8.8.8.8
 d:
-	dmesg -T | grep lomond
+	dmesg -T | grep $(NAME)
